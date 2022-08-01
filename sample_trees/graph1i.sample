@@ -1,19 +1,21 @@
-(program graph1
-(progn output)
+(program graph1 (progn output)
 (progn (:= i 0)
 (label 1)
 (if (<= i 32)
-(progn (:= x (* 6.250000e-02 (float i)))
+(progn (:= x (* 6.250000e-02
+(float i)))
 (:= y (* (funcall exp (- x))
-(funcall sin (* x 6.283180e+00))))
-(:= n (+ (funcall iround (* y 3.200000e+01))
+(funcall sin (* 6.283180e+00
+x))))
+(:= n (+ (funcall iround (* 3.200000e+01
+y))
 34))
-(label 0)
+(progn (label 0)
 (funcall write ' ')
 (:= n (- n 1))
 (if (= n 0)
 (progn)
-(goto 0))
+(goto 0)))
 (funcall writeln '*')
 (:= i (+ i 1))
 (goto 1)))))
